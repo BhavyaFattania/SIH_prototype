@@ -1,0 +1,382 @@
+[
+{
+    "stationCode": "CGWJPR0019",
+    "stationName": "Hansalpur_Pz-I_1",
+    "latitude": "23.0889",
+    "longitude": "72.0167",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0274",
+    "stationName": "Rajoda",
+    "latitude": "22.8499",
+    "longitude": "72.3927",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2007",
+    "stationName": "Karasanpura",
+    "latitude": "23.3017",
+    "longitude": "72.0561",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2009",
+    "stationName": "Kharanti",
+    "latitude": "22.6279",
+    "longitude": "72.3738",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2011",
+    "stationName": "Kunpur_1",
+    "latitude": "23.3574",
+    "longitude": "72.0069",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2014",
+    "stationName": "Narainpura_1",
+    "latitude": "23.0506",
+    "longitude": "72.2884",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2018",
+    "stationName": "Vasveliya",
+    "latitude": "23.0023",
+    "longitude": "72.0341",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2019",
+    "stationName": "Zholapur",
+    "latitude": "22.9879",
+    "longitude": "72.2034",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2010",
+    "stationName": "Kochariya",
+    "latitude": "22.7908",
+    "longitude": "72.311",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2004",
+    "stationName": "Goraiya_1",
+    "latitude": "23.135",
+    "longitude": "71.9314",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2013",
+    "stationName": "Mithapur_2",
+    "latitude": "22.6162",
+    "longitude": "72.1266",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0006",
+    "stationName": "Sola(HC)_Pz_I_1",
+    "latitude": "23.0811",
+    "longitude": "72.5136",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2002",
+    "stationName": "Fatepur_1",
+    "latitude": "22.3968",
+    "longitude": "72.1164",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2016",
+    "stationName": "Sanathal",
+    "latitude": "22.9673",
+    "longitude": "72.4731",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2017",
+    "stationName": "Umedpura",
+    "latitude": "23.3648",
+    "longitude": "72.1304",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0131",
+    "stationName": "Metal_1",
+    "latitude": "22.7993",
+    "longitude": "72.1992",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2015",
+    "stationName": "Ranodra",
+    "latitude": "22.9531",
+    "longitude": "72.7895",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0087",
+    "stationName": "Jetapur_1",
+    "latitude": "22.8961",
+    "longitude": "72.1249",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0161",
+    "stationName": "Moti Kumad Pz",
+    "latitude": "23.133",
+    "longitude": "72.1267",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0268",
+    "stationName": "Bopal_Pz_III_1",
+    "latitude": "23.0386",
+    "longitude": "72.4578",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0269",
+    "stationName": "Bopal_Pz_I_1",
+    "latitude": "23.0386",
+    "longitude": "72.4578",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2006",
+    "stationName": "Kanotar",
+    "latitude": "22.7117",
+    "longitude": "72.2039",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2003",
+    "stationName": "Gatrad",
+    "latitude": "22.9727",
+    "longitude": "72.7031",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2001",
+    "stationName": "Bholad",
+    "latitude": "22.4495",
+    "longitude": "72.2716",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2012",
+    "stationName": "Meni_2",
+    "latitude": "22.8001",
+    "longitude": "72.0856",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0017",
+    "stationName": "Dhanala",
+    "latitude": "22.4521",
+    "longitude": "72.2067",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0001",
+    "stationName": "Bagodara_Pz_I_1",
+    "latitude": "22.6417",
+    "longitude": "72.2139",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0002",
+    "stationName": "Bagodara_Pz_II_1",
+    "latitude": "22.6417",
+    "longitude": "72.2139",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0011",
+    "stationName": "Vagad(Repl)_Pz_1",
+    "latitude": "21.6222",
+    "longitude": "69.9972",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0018",
+    "stationName": "Sanand II_1",
+    "latitude": "23.0033",
+    "longitude": "72.3736",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0020",
+    "stationName": "Dhanwada_2",
+    "latitude": "22.7268",
+    "longitude": "72.3192",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0021",
+    "stationName": "Hansalpur_Pz-III_1",
+    "latitude": "23.0889",
+    "longitude": "72.0167",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0051",
+    "stationName": "Ghuma_Pz_I_1",
+    "latitude": "23.0339",
+    "longitude": "72.4497",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0075",
+    "stationName": "Ukhalod ow",
+    "latitude": "23.222",
+    "longitude": "72.0396",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0280",
+    "stationName": "Ode_3",
+    "latitude": "22.9074",
+    "longitude": "72.556",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0007",
+    "stationName": "Vatwa Pz-II_1",
+    "latitude": "22.9533",
+    "longitude": "72.6161",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWJPR0292",
+    "stationName": "Vejalka_1",
+    "latitude": "22.5515",
+    "longitude": "72.3153",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+},
+{
+    "stationCode": "CGWAHM2005",
+    "stationName": "Hebatpur",
+    "latitude": "22.1308",
+    "longitude": "72.1251",
+    "agencyName": "CGWB",
+    "state": "Gujarat",
+    "district": "Ahmedabad",
+    "dataAcquisitionMode": "Telemetric"
+}
+]
