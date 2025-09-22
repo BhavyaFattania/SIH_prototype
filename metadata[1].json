@@ -1,382 +1,284 @@
-[
-{
-    "stationCode": "CGWJPR0019",
-    "stationName": "Hansalpur_Pz-I_1",
-    "latitude": "23.0889",
-    "longitude": "72.0167",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0274",
-    "stationName": "Rajoda",
-    "latitude": "22.8499",
-    "longitude": "72.3927",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2007",
-    "stationName": "Karasanpura",
-    "latitude": "23.3017",
-    "longitude": "72.0561",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2009",
-    "stationName": "Kharanti",
-    "latitude": "22.6279",
-    "longitude": "72.3738",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2011",
-    "stationName": "Kunpur_1",
-    "latitude": "23.3574",
-    "longitude": "72.0069",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2014",
-    "stationName": "Narainpura_1",
-    "latitude": "23.0506",
-    "longitude": "72.2884",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2018",
-    "stationName": "Vasveliya",
-    "latitude": "23.0023",
-    "longitude": "72.0341",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2019",
-    "stationName": "Zholapur",
-    "latitude": "22.9879",
-    "longitude": "72.2034",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2010",
-    "stationName": "Kochariya",
-    "latitude": "22.7908",
-    "longitude": "72.311",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2004",
-    "stationName": "Goraiya_1",
-    "latitude": "23.135",
-    "longitude": "71.9314",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2013",
-    "stationName": "Mithapur_2",
-    "latitude": "22.6162",
-    "longitude": "72.1266",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0006",
-    "stationName": "Sola(HC)_Pz_I_1",
-    "latitude": "23.0811",
-    "longitude": "72.5136",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2002",
-    "stationName": "Fatepur_1",
-    "latitude": "22.3968",
-    "longitude": "72.1164",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2016",
-    "stationName": "Sanathal",
-    "latitude": "22.9673",
-    "longitude": "72.4731",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2017",
-    "stationName": "Umedpura",
-    "latitude": "23.3648",
-    "longitude": "72.1304",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0131",
-    "stationName": "Metal_1",
-    "latitude": "22.7993",
-    "longitude": "72.1992",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2015",
-    "stationName": "Ranodra",
-    "latitude": "22.9531",
-    "longitude": "72.7895",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0087",
-    "stationName": "Jetapur_1",
-    "latitude": "22.8961",
-    "longitude": "72.1249",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0161",
-    "stationName": "Moti Kumad Pz",
-    "latitude": "23.133",
-    "longitude": "72.1267",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0268",
-    "stationName": "Bopal_Pz_III_1",
-    "latitude": "23.0386",
-    "longitude": "72.4578",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0269",
-    "stationName": "Bopal_Pz_I_1",
-    "latitude": "23.0386",
-    "longitude": "72.4578",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2006",
-    "stationName": "Kanotar",
-    "latitude": "22.7117",
-    "longitude": "72.2039",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2003",
-    "stationName": "Gatrad",
-    "latitude": "22.9727",
-    "longitude": "72.7031",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2001",
-    "stationName": "Bholad",
-    "latitude": "22.4495",
-    "longitude": "72.2716",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2012",
-    "stationName": "Meni_2",
-    "latitude": "22.8001",
-    "longitude": "72.0856",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0017",
-    "stationName": "Dhanala",
-    "latitude": "22.4521",
-    "longitude": "72.2067",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0001",
-    "stationName": "Bagodara_Pz_I_1",
-    "latitude": "22.6417",
-    "longitude": "72.2139",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0002",
-    "stationName": "Bagodara_Pz_II_1",
-    "latitude": "22.6417",
-    "longitude": "72.2139",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0011",
-    "stationName": "Vagad(Repl)_Pz_1",
-    "latitude": "21.6222",
-    "longitude": "69.9972",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0018",
-    "stationName": "Sanand II_1",
-    "latitude": "23.0033",
-    "longitude": "72.3736",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0020",
-    "stationName": "Dhanwada_2",
-    "latitude": "22.7268",
-    "longitude": "72.3192",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0021",
-    "stationName": "Hansalpur_Pz-III_1",
-    "latitude": "23.0889",
-    "longitude": "72.0167",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0051",
-    "stationName": "Ghuma_Pz_I_1",
-    "latitude": "23.0339",
-    "longitude": "72.4497",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0075",
-    "stationName": "Ukhalod ow",
-    "latitude": "23.222",
-    "longitude": "72.0396",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0280",
-    "stationName": "Ode_3",
-    "latitude": "22.9074",
-    "longitude": "72.556",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0007",
-    "stationName": "Vatwa Pz-II_1",
-    "latitude": "22.9533",
-    "longitude": "72.6161",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWJPR0292",
-    "stationName": "Vejalka_1",
-    "latitude": "22.5515",
-    "longitude": "72.3153",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-},
-{
-    "stationCode": "CGWAHM2005",
-    "stationName": "Hebatpur",
-    "latitude": "22.1308",
-    "longitude": "72.1251",
-    "agencyName": "CGWB",
-    "state": "Gujarat",
-    "district": "Ahmedabad",
-    "dataAcquisitionMode": "Telemetric"
-}
-]
+{"stationCode":"CGWJPR0019","stationName":"Hansalpur_Pz-I_1","latitude":"23.0889","longitude":"72.0167","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0274","stationName":"Rajoda","latitude":"22.8499","longitude":"72.3927","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2007","stationName":"Karasanpura","latitude":"23.3017","longitude":"72.0561","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2009","stationName":"Kharanti","latitude":"22.6279","longitude":"72.3738","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2011","stationName":"Kunpur_1","latitude":"23.3574","longitude":"72.0069","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2014","stationName":"Narainpura_1","latitude":"23.0506","longitude":"72.2884","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2018","stationName":"Vasveliya","latitude":"23.0023","longitude":"72.0341","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2019","stationName":"Zholapur","latitude":"22.9879","longitude":"72.2034","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2010","stationName":"Kochariya","latitude":"22.7908","longitude":"72.311","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2004","stationName":"Goraiya_1","latitude":"23.135","longitude":"71.9314","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2013","stationName":"Mithapur_2","latitude":"22.6162","longitude":"72.1266","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0006","stationName":"Sola(HC)_Pz_I_1","latitude":"23.0811","longitude":"72.5136","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2002","stationName":"Fatepur_1","latitude":"22.3968","longitude":"72.1164","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2016","stationName":"Sanathal","latitude":"22.9673","longitude":"72.4731","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2017","stationName":"Umedpura","latitude":"23.3648","longitude":"72.1304","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0131","stationName":"Metal_1","latitude":"22.7993","longitude":"72.1992","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2015","stationName":"Ranodra","latitude":"22.9531","longitude":"72.7895","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0087","stationName":"Jetapur_1","latitude":"22.8961","longitude":"72.1249","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0161","stationName":"Moti Kumad Pz","latitude":"23.133","longitude":"72.1267","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0268","stationName":"Bopal_Pz_III_1","latitude":"23.0386","longitude":"72.4578","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0269","stationName":"Bopal_Pz_I_1","latitude":"23.0386","longitude":"72.4578","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2006","stationName":"Kanotar","latitude":"22.7117","longitude":"72.2039","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2003","stationName":"Gatrad","latitude":"22.9727","longitude":"72.7031","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2001","stationName":"Bholad","latitude":"22.4495","longitude":"72.2716","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2012","stationName":"Meni_2","latitude":"22.8001","longitude":"72.0856","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0017","stationName":"Dhanala","latitude":"22.4521","longitude":"72.2067","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0001","stationName":"Bagodara_Pz_I_1","latitude":"22.6417","longitude":"72.2139","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0002","stationName":"Bagodara_Pz_II_1","latitude":"22.6417","longitude":"72.2139","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0011","stationName":"Vagad(Repl)_Pz_1","latitude":"21.6222","longitude":"69.9972","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0018","stationName":"Sanand II_1","latitude":"23.0033","longitude":"72.3736","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0020","stationName":"Dhanwada_2","latitude":"22.7268","longitude":"72.3192","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0021","stationName":"Hansalpur_Pz-III_1","latitude":"23.0889","longitude":"72.0167","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0051","stationName":"Ghuma_Pz_I_1","latitude":"23.0339","longitude":"72.4497","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0075","stationName":"Ukhalod ow","latitude":"23.222","longitude":"72.0396","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0280","stationName":"Ode_3","latitude":"22.9074","longitude":"72.556","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0007","stationName":"Vatwa Pz-II_1","latitude":"22.9533","longitude":"72.6161","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0292","stationName":"Vejalka_1","latitude":"22.5515","longitude":"72.3153","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2005","stationName":"Hebatpur","latitude":"22.1308","longitude":"72.1251","agencyName":"CGWB","state":"Gujarat","district":"Ahmedabad","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0052","stationName":"Gopalpura Vanda Pz_1","latitude":"21.375","longitude":"71.4917","agencyName":"CGWB","state":"Gujarat","district":"Amreli","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0031","stationName":"Khamba_Pz_1","latitude":"21.1417","longitude":"71.2542","agencyName":"CGWB","state":"Gujarat","district":"Amreli","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0033","stationName":"Charkhadia_Pz_1","latitude":"21.3875","longitude":"71.2917","agencyName":"CGWB","state":"Gujarat","district":"Amreli","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0188","stationName":"Jesar_Pz_1","latitude":"21.3714","longitude":"71.6703","agencyName":"CGWB","state":"Gujarat","district":"Amreli","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0116","stationName":"Haripur_Pz_I_1","latitude":"21.6097","longitude":"71.4431","agencyName":"CGWB","state":"Gujarat","district":"Amreli","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0027","stationName":"Amritvel_Pz_1","latitude":"21.3972","longitude":"71.3583","agencyName":"CGWB","state":"Gujarat","district":"Amreli","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0028","stationName":"Babra_Pz_1","latitude":"21.8472","longitude":"71.2958","agencyName":"CGWB","state":"Gujarat","district":"Amreli","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0029","stationName":"Dhari_Pz_1","latitude":"21.3264","longitude":"71.0181","agencyName":"CGWB","state":"Gujarat","district":"Amreli","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0035","stationName":"Liliya_Pz_I_1","latitude":"21.5347","longitude":"71.3792","agencyName":"CGWB","state":"Gujarat","district":"Amreli","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2020","stationName":"Kanbhaipur A","latitude":"22.6261","longitude":"73.0848","agencyName":"CGWB","state":"Gujarat","district":"Anand","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0046","stationName":"Tarapur Pz-II_1","latitude":"22.4861","longitude":"72.6611","agencyName":"CGWB","state":"Gujarat","district":"Anand","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0057","stationName":"Sarsa_Pz_I_1","latitude":"22.5444","longitude":"73.0708","agencyName":"CGWB","state":"Gujarat","district":"Anand","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0039","stationName":"Anklav_Pz_II_1","latitude":"22.3764","longitude":"72.9972","agencyName":"CGWB","state":"Gujarat","district":"Anand","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0040","stationName":"Ghunteli OW I","latitude":"22.5692","longitude":"72.8489","agencyName":"CGWB","state":"Gujarat","district":"Anand","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0042","stationName":"Davalpura_Pz_1","latitude":"22.4583","longitude":"72.8028","agencyName":"CGWB","state":"Gujarat","district":"Anand","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0056","stationName":"Hariyan_Pz_1","latitude":"22.4042","longitude":"72.6722","agencyName":"CGWB","state":"Gujarat","district":"Anand","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0044","stationName":"Petlad_Pz_II_1","latitude":"22.475","longitude":"72.8","agencyName":"CGWB","state":"Gujarat","district":"Anand","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0043","stationName":"Petlad_Pz_I_1","latitude":"22.475","longitude":"72.8","agencyName":"CGWB","state":"Gujarat","district":"Anand","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0036","stationName":"Walmi_ I_1","latitude":"22.5111","longitude":"72.9819","agencyName":"CGWB","state":"Gujarat","district":"Anand","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0037","stationName":"Walmi_ II_1","latitude":"22.5083","longitude":"72.9822","agencyName":"CGWB","state":"Gujarat","district":"Anand","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0038","stationName":"Anklav_Pz_I_1","latitude":"22.3764","longitude":"72.9972","agencyName":"CGWB","state":"Gujarat","district":"Anand","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2024","stationName":"Bhim Bordi","latitude":"24.1142","longitude":"71.6142","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2026","stationName":"Dodiya_1","latitude":"24.4053","longitude":"71.8836","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2027","stationName":"Dodiya_1","latitude":"24.4053","longitude":"71.8836","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2028","stationName":"Mallupur_1","latitude":"24.3736","longitude":"71.6606","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2030","stationName":"Nanota","latitude":"24.1147","longitude":"71.8736","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2032","stationName":"Nenava_2","latitude":"24.6556","longitude":"71.8797","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2033","stationName":"Nenava_2","latitude":"24.6556","longitude":"71.8797","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0062","stationName":"Rah_Pz II_1","latitude":"24.4958","longitude":"71.8361","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0068","stationName":"Naroli Pzi_1","latitude":"24.6164","longitude":"71.6386","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0069","stationName":"Naroli Pzii_1","latitude":"24.6164","longitude":"71.6386","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0071","stationName":"Tharad Pzi_1","latitude":"24.385","longitude":"71.6194","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0072","stationName":"Tharad Pzii_1","latitude":"24.385","longitude":"71.6194","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0074","stationName":"Jalotra Pz-I_1","latitude":"24.1411","longitude":"72.5847","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0077","stationName":"Biyok_Pz-II_1","latitude":"24.2722","longitude":"71.6547","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0079","stationName":"Vav   i_1","latitude":"24.3583","longitude":"71.5083","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0270","stationName":"Balodhar_Pz-I_1","latitude":"24.2306","longitude":"71.9122","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0271","stationName":"Dhanera Pz-I_1","latitude":"24.5061","longitude":"72.0292","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0272","stationName":"Palanpur_Pz_1","latitude":"24.1722","longitude":"72.45","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2034","stationName":"Rampura_6","latitude":"24.2764","longitude":"72.0678","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2029","stationName":"Mallupur_1","latitude":"24.3736","longitude":"71.6606","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2035","stationName":"Sasam_1","latitude":"24.0712","longitude":"72.2815","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2023","stationName":"Bhatvar Vas","latitude":"24.2875","longitude":"71.4467","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0050","stationName":"Dantiwada_4","latitude":"24.1889","longitude":"72.7606","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0063","stationName":"Rah_Pz III","latitude":"24.4958","longitude":"71.8361","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2037","stationName":"Sohanpura","latitude":"23.8772","longitude":"71.8392","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0064","stationName":"Kumar OW","latitude":"24.5861","longitude":"71.9333","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0049","stationName":"Danta_3","latitude":"24.1889","longitude":"72.7653","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2036","stationName":"Sohanpura","latitude":"23.8772","longitude":"71.8392","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0073","stationName":"Tharad Pziii_1","latitude":"24.385","longitude":"71.6194","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2022","stationName":"Beda_2","latitude":"24.0392","longitude":"71.5983","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2031","stationName":"Naroli_3","latitude":"24.6175","longitude":"71.6404","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0061","stationName":"Rah_Pz I_1","latitude":"24.4958","longitude":"71.8361","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2025","stationName":"Bhim Bordi","latitude":"24.1142","longitude":"71.6142","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0070","stationName":"Naroli Pziii_1","latitude":"24.6164","longitude":"71.6386","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0078","stationName":"Vav    ii_1","latitude":"24.3611","longitude":"71.5111","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0060","stationName":"Vinchivadi Pz-II_1","latitude":"24.59","longitude":"71.93","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0273","stationName":"Mahi_Pz_1","latitude":"24.0286","longitude":"72.3808","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0047","stationName":"Bhabhar  iii_1","latitude":"24.0597","longitude":"71.5961","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0048","stationName":"Ambaji_Pz_1","latitude":"24.3361","longitude":"72.8472","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0053","stationName":"Deesa Pzi_1","latitude":"24.2567","longitude":"72.1875","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0054","stationName":"Deesa Pzii_1","latitude":"24.2567","longitude":"72.1875","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0058","stationName":"Lakhani  i_1","latitude":"24.31","longitude":"71.82","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0059","stationName":"Takarwada Pz-I_1","latitude":"24.11","longitude":"72.33","agencyName":"CGWB","state":"Gujarat","district":"Banaskantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0080","stationName":"Bharuch I_1","latitude":"21.7083","longitude":"73.0","agencyName":"CGWB","state":"Gujarat","district":"Bharuch","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0076","stationName":"Jambusar_1","latitude":"22.05","longitude":"72.81","agencyName":"CGWB","state":"Gujarat","district":"Bharuch","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0081","stationName":"Hansot_3","latitude":"21.5833","longitude":"72.8083","agencyName":"CGWB","state":"Gujarat","district":"Bharuch","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0082","stationName":"Kadodara_2","latitude":"21.7625","longitude":"72.6389","agencyName":"CGWB","state":"Gujarat","district":"Bharuch","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0232","stationName":"Netrang(Rep)_Pz_1","latitude":"21.6417","longitude":"73.3667","agencyName":"CGWB","state":"Gujarat","district":"Bharuch","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0084","stationName":"Gadhada1_1","latitude":"21.9681","longitude":"71.5819","agencyName":"CGWB","state":"Gujarat","district":"Bhavnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0083","stationName":"Kamlej ow","latitude":"21.7752","longitude":"72.0407","agencyName":"CGWB","state":"Gujarat","district":"Bhavnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0085","stationName":"Chowk Pz_1","latitude":"21.4292","longitude":"71.7639","agencyName":"CGWB","state":"Gujarat","district":"Bhavnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0086","stationName":"Palitana1_1","latitude":"21.525","longitude":"71.8236","agencyName":"CGWB","state":"Gujarat","district":"Bhavnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0092","stationName":"Koli_2","latitude":"22.4435","longitude":"74.05","agencyName":"CGWB","state":"Gujarat","district":"Chhota Udaipur","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0169","stationName":"Kosindra Pz-I_1","latitude":"22.15","longitude":"73.76","agencyName":"CGWB","state":"Gujarat","district":"Chhota Udaipur","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0016","stationName":"KHATIYAVANT","latitude":"22.1619","longitude":"73.9704","agencyName":"CGWB","state":"Gujarat","district":"Chhota Udaipur","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0022","stationName":"Koli EW","latitude":"22.4477","longitude":"74.0385","agencyName":"CGWB","state":"Gujarat","district":"Chhota Udaipur","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0023","stationName":"Bodgam EW","latitude":"22.3406","longitude":"74.1849","agencyName":"CGWB","state":"Gujarat","district":"Chhota Udaipur","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0089","stationName":"Chatiamli","latitude":"22.0039","longitude":"73.8115","agencyName":"CGWB","state":"Gujarat","district":"Chhota Udaipur","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0093","stationName":"Vankol_2","latitude":"22.3272","longitude":"73.8638","agencyName":"CGWB","state":"Gujarat","district":"Chhota Udaipur","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0196","stationName":"KALARANI_1","latitude":"22.2197","longitude":"73.8708","agencyName":"CGWB","state":"Gujarat","district":"Chhota Udaipur","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0253","stationName":"Ahwa_Pz_1","latitude":"20.7589","longitude":"73.6861","agencyName":"CGWB","state":"Gujarat","district":"Dang","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0109","stationName":"Dahegam I_1","latitude":"23.17","longitude":"72.84","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0276","stationName":"Pethapur_I","latitude":"23.2672","longitude":"72.6731","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2041","stationName":"Hathijan","latitude":"23.0874","longitude":"72.8753","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2042","stationName":"Piplaj_2","latitude":"23.3145","longitude":"72.6885","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2044","stationName":"Sherisha","latitude":"23.1984","longitude":"72.4703","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2045","stationName":"Sughad","latitude":"23.1167","longitude":"72.6274","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2046","stationName":"Veda_1","latitude":"23.4132","longitude":"72.5499","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0100","stationName":"Gandhinagar_Pz_II","latitude":"23.3736","longitude":"72.705","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0117","stationName":"Magroda Pz_2","latitude":"23.6094","longitude":"72.5008","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0275","stationName":"Isand_2","latitude":"23.2861","longitude":"72.4894","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0118","stationName":"Mansa_3","latitude":"23.4231","longitude":"72.665","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0055","stationName":"Padusma Pz I_1","latitude":"23.4942","longitude":"72.6217","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0066","stationName":"Kharoj Dabhi Pz II_2","latitude":"23.38","longitude":"72.52","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0067","stationName":"Gamij OW","latitude":"23.048","longitude":"72.8395","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0098","stationName":"Adalaj_Pz_III_1","latitude":"23.175","longitude":"72.5583","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0099","stationName":"Chiloda_Pz_II_1","latitude":"23.2272","longitude":"72.7392","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0101","stationName":"Pethapur_Pz-II_1","latitude":"23.2672","longitude":"72.6731","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0102","stationName":"Dehegam I","latitude":"23.1708","longitude":"72.8417","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0103","stationName":"Sardhav Pz -I_1","latitude":"23.2972","longitude":"72.5739","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0104","stationName":"Sardhav Pz-II_1","latitude":"23.2972","longitude":"72.5739","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0105","stationName":"Kalol(Nest)_Pz_I_1","latitude":"23.2583","longitude":"72.4722","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0106","stationName":"Kasturinagar(IFFCO)_1","latitude":"23.1903","longitude":"72.5528","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0107","stationName":"Khoraj Dabhi OW III","latitude":"23.3844","longitude":"72.5225","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0110","stationName":"Kalol(Nest)_Pz_III_1","latitude":"23.26","longitude":"72.47","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0111","stationName":"Nardipur  i_1","latitude":"23.3319","longitude":"72.5667","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0114","stationName":"Charada Pz -II_1","latitude":"23.4817","longitude":"72.6517","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0115","stationName":"Lakroda Pz_2","latitude":"23.4292","longitude":"72.7883","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0119","stationName":"Kalol(Rep)_Pz_II_1","latitude":"23.24","longitude":"72.49","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0278","stationName":"Charada_I","latitude":"23.4817","longitude":"72.6517","agencyName":"CGWB","state":"Gujarat","district":"Gandhinagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2048","stationName":"Umej_1","latitude":"20.8754","longitude":"71.114","agencyName":"CGWB","state":"Gujarat","district":"Gir Somnath","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2047","stationName":"Sanvav","latitude":"20.8915","longitude":"70.9056","agencyName":"CGWB","state":"Gujarat","district":"Gir Somnath","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2049","stationName":"Bharatpur(Virpur)","latitude":"22.3926","longitude":"70.3786","agencyName":"CGWB","state":"Gujarat","district":"Jamnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2051","stationName":"Harsadpar Ew","latitude":"22.3674","longitude":"70.1265","agencyName":"CGWB","state":"Gujarat","district":"Jamnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2053","stationName":"Samana_4","latitude":"22.1063","longitude":"70.1599","agencyName":"CGWB","state":"Gujarat","district":"Jamnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0124","stationName":"Khambhaliya_1","latitude":"22.2097","longitude":"69.6458","agencyName":"CGWB","state":"Gujarat","district":"Jamnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0121","stationName":"Jamnagar1_1","latitude":"22.4708","longitude":"70.05","agencyName":"CGWB","state":"Gujarat","district":"Jamnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0123","stationName":"Bhatiya_2","latitude":"22.0944","longitude":"69.2667","agencyName":"CGWB","state":"Gujarat","district":"Jamnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2052","stationName":"Rinari","latitude":"22.1123","longitude":"70.3706","agencyName":"CGWB","state":"Gujarat","district":"Jamnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0120","stationName":"Jamjodhpur_2","latitude":"21.9056","longitude":"70.0306","agencyName":"CGWB","state":"Gujarat","district":"Jamnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2050","stationName":"Govana","latitude":"22.1603","longitude":"69.8816","agencyName":"CGWB","state":"Gujarat","district":"Jamnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0010","stationName":"Nana Garediya","latitude":"22.6208","longitude":"70.4062","agencyName":"CGWB","state":"Gujarat","district":"Jamnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0012","stationName":"Valasan_1","latitude":"21.9019","longitude":"70.1283","agencyName":"CGWB","state":"Gujarat","district":"Jamnagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2054","stationName":"Indra_2","latitude":"21.5886","longitude":"70.1172","agencyName":"CGWB","state":"Gujarat","district":"Junagadh","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2055","stationName":"Sultanabad_1","latitude":"21.4974","longitude":"70.109","agencyName":"CGWB","state":"Gujarat","district":"Junagadh","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0129","stationName":"Talala_Pz_1","latitude":"21.0639","longitude":"70.5383","agencyName":"CGWB","state":"Gujarat","district":"Junagadh","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0147","stationName":"Umej","latitude":"20.8754","longitude":"71.114","agencyName":"CGWB","state":"Gujarat","district":"Junagadh","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0127","stationName":"Gadu_2","latitude":"21.0542","longitude":"70.2792","agencyName":"CGWB","state":"Gujarat","district":"Junagadh","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0126","stationName":"Kodinar_2","latitude":"20.8","longitude":"70.6917","agencyName":"CGWB","state":"Gujarat","district":"Junagadh","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0125","stationName":"Junagadh_2","latitude":"21.5094","longitude":"70.4622","agencyName":"CGWB","state":"Gujarat","district":"Junagadh","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0128","stationName":"Mangrol_3","latitude":"21.125","longitude":"70.1083","agencyName":"CGWB","state":"Gujarat","district":"Junagadh","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0130","stationName":"Gangda_Pz_1","latitude":"20.8583","longitude":"71.1667","agencyName":"CGWB","state":"Gujarat","district":"Junagadh","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0132","stationName":"Visavadar_2","latitude":"21.3389","longitude":"70.7486","agencyName":"CGWB","state":"Gujarat","district":"Junagadh","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0145","stationName":"Thumbala_1","latitude":"21.3935","longitude":"70.6326","agencyName":"CGWB","state":"Gujarat","district":"Junagadh","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0146","stationName":"Nagadiya","latitude":"21.3905","longitude":"70.3748","agencyName":"CGWB","state":"Gujarat","district":"Junagadh","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2071","stationName":"Kaniyel","latitude":"22.9496","longitude":"72.9651","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0135","stationName":"Vaso_2","latitude":"22.66","longitude":"72.75","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0155","stationName":"Sarkhej _ I_1","latitude":"22.9861","longitude":"72.8806","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2072","stationName":"Vadadla","latitude":"22.8171","longitude":"72.7216","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0154","stationName":"Vyas vasna_1","latitude":"23.1056","longitude":"73.1042","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0158","stationName":"Matar II_1","latitude":"22.7097","longitude":"72.6681","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0134","stationName":"Matar I_1","latitude":"22.71","longitude":"72.67","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0153","stationName":"Balasinor_2","latitude":"22.9583","longitude":"73.3361","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0156","stationName":"Sarkhej _ II_1","latitude":"22.9861","longitude":"72.8806","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0157","stationName":"Sarkhej _ Pz-III_1","latitude":"22.9861","longitude":"72.8806","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0159","stationName":"Aklacha OW I","latitude":"22.8633","longitude":"72.8487","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0160","stationName":"Nes_Pz_1","latitude":"22.7083","longitude":"73.2028","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0162","stationName":"Aklacha OW II","latitude":"22.8633","longitude":"72.8485","agencyName":"CGWB","state":"Gujarat","district":"Kheda","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2085","stationName":"Hajnali","latitude":"22.8772","longitude":"70.6266","agencyName":"CGWB","state":"Gujarat","district":"Morbi","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2086","stationName":"Tithawa_1","latitude":"22.6423","longitude":"70.8588","agencyName":"CGWB","state":"Gujarat","district":"Morbi","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0193","stationName":"Baman Phalia_Pz_1","latitude":"21.7983","longitude":"73.3792","agencyName":"CGWB","state":"Gujarat","district":"Narmada","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0200","stationName":"Rasulpura_Pz_1","latitude":"21.9667","longitude":"73.625","agencyName":"CGWB","state":"Gujarat","district":"Narmada","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0194","stationName":"Kewadia_Pz_1","latitude":"21.8828","longitude":"73.7006","agencyName":"CGWB","state":"Gujarat","district":"Narmada","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0199","stationName":"Agar(Rep)_Pz_1","latitude":"22.0311","longitude":"73.6567","agencyName":"CGWB","state":"Gujarat","district":"Narmada","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0195","stationName":"Rajpipla_1","latitude":"21.875","longitude":"73.5","agencyName":"CGWB","state":"Gujarat","district":"Narmada","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0202","stationName":"Vansda_2","latitude":"20.7644","longitude":"73.3631","agencyName":"CGWB","state":"Gujarat","district":"Navsari","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0201","stationName":"Navsari_3","latitude":"20.95","longitude":"72.9333","agencyName":"CGWB","state":"Gujarat","district":"Navsari","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2096","stationName":"Finchal","latitude":"23.7448","longitude":"72.2131","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2100","stationName":"Khanpur_7","latitude":"23.7993","longitude":"72.0235","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2102","stationName":"Lolada_1","latitude":"23.5375","longitude":"71.6951","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2103","stationName":"Mota Nayta","latitude":"23.969","longitude":"72.0813","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2105","stationName":"Piprala_3","latitude":"23.6454","longitude":"71.0942","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2106","stationName":"Rampura_6","latitude":"23.7169","longitude":"71.5528","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2110","stationName":"Upliyasra","latitude":"23.6342","longitude":"71.6184","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2111","stationName":"Varana_1","latitude":"23.7237","longitude":"71.7294","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0221","stationName":"Sidhpur Naditat Pz II_1","latitude":"23.9252","longitude":"72.3983","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0222","stationName":"Vanasan Pz_2","latitude":"24.1707","longitude":"72.5273","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0294","stationName":"Kakosi_Pz_I_1","latitude":"24.0017","longitude":"72.3058","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2112","stationName":"Zilvana","latitude":"23.7255","longitude":"71.8139","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2094","stationName":"Daigamda","latitude":"23.7871","longitude":"71.331","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2099","stationName":"Jesda_1","latitude":"23.5809","longitude":"71.7968","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0216","stationName":"Kanesara Pz_1","latitude":"23.8883","longitude":"72.3381","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2108","stationName":"Takodi-Baldevpura","latitude":"23.6366","longitude":"72.169","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2101","stationName":"Kukrana","latitude":"23.6334","longitude":"71.8886","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2109","stationName":"Tuvad","latitude":"23.5446","longitude":"71.9343","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2097","stationName":"Jaleswar Paldi","latitude":"23.8874","longitude":"72.1573","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2098","stationName":"Jamanpur_1","latitude":"23.7109","longitude":"71.9586","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0290","stationName":"Lanwa Pz-I_1","latitude":"23.8014","longitude":"72.7625","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0218","stationName":"Lukhasan_2","latitude":"23.9601","longitude":"72.4674","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0209","stationName":"Jangral Pzii_1","latitude":"23.7056","longitude":"71.675","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2107","stationName":"Sevala","latitude":"23.7499","longitude":"72.058","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0223","stationName":"Bhutia vasna i_1","latitude":"23.9167","longitude":"72.1","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0295","stationName":"Kakosi_Pz_II_1","latitude":"24.0017","longitude":"72.3058","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0291","stationName":"Matarwadi I_1","latitude":"23.8683","longitude":"72.1472","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2093","stationName":"Antarnes_1","latitude":"23.6975","longitude":"71.3122","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2095","stationName":"Dhadhana","latitude":"23.8089","longitude":"71.8092","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2104","stationName":"Piplana_1","latitude":"23.7813","longitude":"71.9383","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0208","stationName":"Chanasma i_1","latitude":"23.7111","longitude":"72.115","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0217","stationName":"Kot Pz_2","latitude":"23.9456","longitude":"72.3955","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0213","stationName":"Biliya(Temple)_Pz_II_1","latitude":"23.8883","longitude":"72.3986","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0219","stationName":"Nagwasan_1","latitude":"23.9464","longitude":"72.9464","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0220","stationName":"Sidhpur Naditat Pz I_1","latitude":"23.9252","longitude":"72.3983","agencyName":"CGWB","state":"Gujarat","district":"Patan","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0225","stationName":"Nagka_1","latitude":"21.8213","longitude":"69.6493","agencyName":"CGWB","state":"Gujarat","district":"Porbandar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0224","stationName":"Kutiyana_Pz_1","latitude":"21.6222","longitude":"69.9972","agencyName":"CGWB","state":"Gujarat","district":"Porbandar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0226","stationName":"Porbandar_2","latitude":"21.645","longitude":"69.6425","agencyName":"CGWB","state":"Gujarat","district":"Porbandar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2115","stationName":"Kharachiya Jas","latitude":"22.2477","longitude":"71.3607","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0267","stationName":"Khajurda","latitude":"21.8871","longitude":"70.4013","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2114","stationName":"Bhandariya_2","latitude":"22.1823","longitude":"71.0514","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0228","stationName":"Jasdan_2","latitude":"22.0444","longitude":"71.2139","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0227","stationName":"Jamkandorna_2","latitude":"21.8972","longitude":"70.4917","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2113","stationName":"Bava Pipaliya","latitude":"21.6366","longitude":"70.6252","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0030","stationName":"Dapaliya","latitude":"22.4577","longitude":"70.5664","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0024","stationName":"Dhamalpur","latitude":"22.3542","longitude":"70.875","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0231","stationName":"Morbi_2","latitude":"22.825","longitude":"70.8583","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0230","stationName":"Lodhika_2","latitude":"22.1333","longitude":"70.6319","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0014","stationName":"Mevasa_1","latitude":"21.876","longitude":"70.5949","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0015","stationName":"MandanKundala","latitude":"21.8515","longitude":"70.8701","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0229","stationName":"Jetpur_3","latitude":"21.7561","longitude":"70.6194","agencyName":"CGWB","state":"Gujarat","district":"Rajkot","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0237","stationName":"Derol Pz-II_1","latitude":"23.5994","longitude":"72.9025","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0239","stationName":"Karol OW","latitude":"23.3715","longitude":"72.8419","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0234","stationName":"Bhiloda_Pz_1","latitude":"23.7667","longitude":"73.25","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0233","stationName":"Bayad_Pz_1","latitude":"23.2167","longitude":"73.2292","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0236","stationName":"Vejpur_Pz_1","latitude":"23.7972","longitude":"73.2208","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0025","stationName":"Kheda EW 1","latitude":"23.2944","longitude":"73.2064","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0026","stationName":"Vivav EW","latitude":"23.9822","longitude":"73.0403","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0214","stationName":"Dawali EW II","latitude":"23.6064","longitude":"73.2311","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0215","stationName":"Virpur_1(Himmat)_1","latitude":"23.6517","longitude":"72.9539","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0235","stationName":"Kuski_Pz_1","latitude":"23.6389","longitude":"73.3694","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0240","stationName":"Khedbrahma_Pz_1","latitude":"24.0361","longitude":"73.0444","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0241","stationName":"Malpur_Pz_2","latitude":"23.3417","longitude":"73.4681","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0242","stationName":"Anwarpura Pz_1","latitude":"23.4056","longitude":"72.8456","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0244","stationName":"Piludra OW","latitude":"23.4831","longitude":"72.8658","agencyName":"CGWB","state":"Gujarat","district":"Sabarkantha","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0245","stationName":"Bardoli_1","latitude":"21.1153","longitude":"73.1","agencyName":"CGWB","state":"Gujarat","district":"Surat","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0246","stationName":"Puna_1","latitude":"20.9236","longitude":"73.2333","agencyName":"CGWB","state":"Gujarat","district":"Surat","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0247","stationName":"Jhankhvav_1","latitude":"21.4667","longitude":"72.9528","agencyName":"CGWB","state":"Gujarat","district":"Surat","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWAHM2116","stationName":"Panshina_1","latitude":"22.5532","longitude":"71.9686","agencyName":"CGWB","state":"Gujarat","district":"Surendranagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0252","stationName":"Panshina OW","latitude":"22.5532","longitude":"71.9686","agencyName":"CGWB","state":"Gujarat","district":"Surendranagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0248","stationName":"Chotila1_1","latitude":"22.425","longitude":"71.1817","agencyName":"CGWB","state":"Gujarat","district":"Surendranagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0250","stationName":"Limbdi-Pz_1","latitude":"22.5722","longitude":"71.8083","agencyName":"CGWB","state":"Gujarat","district":"Surendranagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0251","stationName":"Sayala_1","latitude":"22.5333","longitude":"71.4833","agencyName":"CGWB","state":"Gujarat","district":"Surendranagar","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0249","stationName":"Nizar_2","latitude":"21.48","longitude":"74.2","agencyName":"CGWB","state":"Gujarat","district":"TAPI","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0264","stationName":"Waghodia Pz_1","latitude":"22.3639","longitude":"73.3769","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0261","stationName":"Vadodara I_1","latitude":"22.3047","longitude":"73.2717","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0257","stationName":"Sankheda_3","latitude":"22.5389","longitude":"73.175","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0254","stationName":"Vadtalav Pz_1","latitude":"22.2586","longitude":"73.7839","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0262","stationName":"Vadodara Ii_1","latitude":"22.3047","longitude":"73.2717","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0259","stationName":"Handod1_1","latitude":"22.0736","longitude":"73.0458","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0065","stationName":"Chella Karamsiya Pz_1","latitude":"22.3967","longitude":"73.4322","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0197","stationName":"Raypura i_1","latitude":"22.28","longitude":"73.09","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0255","stationName":"Chitral PZ_II_1","latitude":"22.1819","longitude":"72.9458","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0256","stationName":"Chitral Pz-I_1","latitude":"22.1819","longitude":"72.9458","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0258","stationName":"Segwa chowki I_1","latitude":"22.0083","longitude":"73.3833","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0260","stationName":"Sankarda_1","latitude":"22.4389","longitude":"73.1222","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0263","stationName":"Ghayaj ii_1","latitude":"22.23","longitude":"73.05","agencyName":"CGWB","state":"Gujarat","district":"Vadodara","dataAcquisitionMode":"Telemetric"}
+{"stationCode":"CGWJPR0266","stationName":"Valsad1_1","latitude":"20.6056","longitude":"72.9278","agencyName":"CGWB","state":"Gujarat","district":"Valsad","dataAcquisitionMode":"Telemetric"}
