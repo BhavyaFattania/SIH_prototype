@@ -31,8 +31,8 @@ st.markdown("""
     
     /* Metric cards */
     .metric-card {
-        background: #ffffff;
-        color: #000000 !important;  /* black text on white cards */
+        background: #f8f9fa;
+        color: #000000 !important;
         padding: 1rem;
         border-radius: 8px;
         border: 2px solid #dee2e6;
@@ -45,8 +45,8 @@ st.markdown("""
         padding: 1rem;
         border-radius: 8px;
         margin: 0.5rem 0;
+        color: #000000 !important;
         font-weight: 500;
-        color: #000000 !important;  /* readable text inside alert boxes */
     }
     .alert-critical { 
         background-color: #ffebee; 
@@ -65,31 +65,49 @@ st.markdown("""
     }
     
     /* Streamlit component overrides */
-    .stSelectbox > div > div,
-    .stMultiSelect > div > div {
-        background-color: #ffffff !important;
-        color: #000000 !important;
+    .stSelectbox > div > div {
+        background-color: black !important;
+        color: white !important;
         border: 2px solid #cccccc !important;
     }
     
-    .stSelectbox label,
-    .stMultiSelect label,
-    .stRadio label {
-        color: #ffffff !important;
+    .stSelectbox label {
+        color: white !important;
         font-weight: 600 !important;
     }
     
     .stRadio > div {
-        color: #ffffff !important;
+        color: black !important;
+    }
+    
+    .stRadio label {
+        color: black !important;
+        font-weight: 600 !important;
+    }
+    
+    .stMultiSelect > div > div {
+        background-color: #ffffff !important;
+        color: black !important;
+        border: 2px solid #cccccc !important;
+    }
+    
+    .stMultiSelect label {
+        color: black !important;
+        font-weight: 600 !important;
     }
     
     /* Headers and text */
-    h1, h2, h3, h4, h5, h6, p, div, span, label {
-        color: #ffffff !important;
+    h1, h2, h3, h4, h5  {
+        color: white !important;
+        font-weight: bold !important;
     }
+    
+    div, span,label, p {
+        color: white !important;
+    }
+    
 </style>
 """, unsafe_allow_html=True)
-
 
 # Load your JSON station metadata
 @st.cache_data
@@ -102,38 +120,149 @@ def load_station_metadata():
         df["longitude"] = df["longitude"].astype(float)
         return df
     except FileNotFoundError:
-        st.error("metadata[1].json file not found.")
+        # st.error("metadata[1].json file not found.")
         return pd.DataFrame()
     except Exception as e:
-        st.error(f"Error loading metadata: {str(e)}")
+        # st.error(f"Error loading metadata: {str(e)}")
         return pd.DataFrame()
 
-# Load real-time data from CSV
+# Load real-time data from CSV with robust error handling
 @st.cache_data
 def load_realtime_data_from_csv():
     try:
-        df = pd.read_csv("Combined_cleaned.csv")
-        df.columns = df.columns.str.strip()
+        # Try different encoding options
+        encodings_to_try = ['utf-8', 'latin-1', 'iso-8859-1', 'cp1252']
+        df = None
         
-        if 'Date_Time' in df.columns:
-            df['Date_Time'] = pd.to_datetime(df['Date_Time'], errors='coerce', format='%Y-%m-%d %H:%M:%S')
+        for encoding in encodings_to_try:
+            try:
+                df = pd.read_csv("Combined_cleaned.csv", encoding=encoding)
+                #st.info(f"File loaded successfully with {encoding} encoding")
+                break
+            except UnicodeDecodeError:
+                continue
         
-        if 'Value' in df.columns:
+        if df is None:
+            st.error("Could not read CSV file with any encoding")
+            return pd.DataFrame()
+        
+        # Debug: Show original column info
+        # st.write("**Debug Info:**")
+        # st.write(f"Original columns count: {len(df.columns)}")
+        # st.write(f"DataFrame shape: {df.shape}")
+        
+        # Clean column names - remove NaN columns first
+        original_columns = df.columns.tolist()
+        # st.write(f"Original columns: {original_columns[:10]}...")  # Show first 10
+        
+        # Filter out NaN column names
+        valid_columns = []
+        column_mapping = {}
+        
+        for i, col in enumerate(df.columns):
+            if pd.notna(col) and str(col).strip() != '':
+                clean_col = str(col).strip()
+                valid_columns.append(clean_col)
+                column_mapping[col] = clean_col
+            else:
+                st.warning(f"Dropping column {i} (NaN or empty): {col}")
+        
+        # Keep only valid columns
+        df = df.loc[:, [col for col in df.columns if pd.notna(col) and str(col).strip() != '']]
+        
+        # Rename columns to clean names
+        df = df.rename(columns=column_mapping)
+        
+        # st.success(f"Valid columns after cleaning: {list(df.columns)}")
+        
+        # Check for required columns
+        required_columns = ['stationCode']
+        missing_columns = [col for col in required_columns if col not in df.columns]
+        
+        if missing_columns:
+            st.error(f"Missing required columns: {missing_columns}")
+            st.write("Available columns:", list(df.columns))
+            return pd.DataFrame()
+        
+        # Process datetime column if exists
+        datetime_columns = ['Date_Time', 'DateTime', 'date_time', 'timestamp']
+        datetime_col = None
+        for col in datetime_columns:
+            if col in df.columns:
+                datetime_col = col
+                break
+        
+        if datetime_col:
+            df['Date_Time'] = pd.to_datetime(df[datetime_col], errors='coerce')
+            # st.info(f"Found datetime column: {datetime_col}")
+        
+        # Process numeric columns
+        numeric_columns = ['Value', 'value', 'water_level', 'level']
+        value_col = None
+        for col in numeric_columns:
+            if col in df.columns:
+                value_col = col
+                break
+        
+        if value_col and value_col != 'Value':
+            df['Value'] = pd.to_numeric(df[value_col], errors='coerce')
+            # st.info(f"Found value column: {value_col}")
+        elif 'Value' in df.columns:
             df['Value'] = pd.to_numeric(df['Value'], errors='coerce')
+        
         if 'well_depth' in df.columns:
             df['well_depth'] = pd.to_numeric(df['well_depth'], errors='coerce')
-            
+        
+        # Remove rows where stationCode is NaN
+        df = df.dropna(subset=['stationCode'])
+        
+        # Get latest data for each station with better logic
         if 'Date_Time' in df.columns:
-            latest_data = df.loc[df.groupby('stationCode')['Date_Time'].idxmax()]
+            # Remove rows with invalid dates first
+            df_with_dates = df.dropna(subset=['Date_Time'])
+            
+            if not df_with_dates.empty:
+                # Sort by Date_Time and get the latest for each station
+                df_with_dates = df_with_dates.sort_values(['stationCode', 'Date_Time'])
+                latest_data = df_with_dates.groupby('stationCode').last().reset_index()
+                
+                # Debug info
+                # st.write("**Latest data processing:**")
+                # st.write(f"Records with valid dates: {len(df_with_dates)}")
+                # st.write(f"Unique stations: {len(latest_data)}")
+                
+                # Show sample of latest dates
+                if len(latest_data) > 0:
+                    sample_dates = latest_data[['stationCode', 'Date_Time']].head(5)
+                    # st.write("**Sample latest dates:**")
+                    # st.dataframe(sample_dates)
+            else:
+                st.warning("No valid dates found in Date_Time column")
+                latest_data = df.drop_duplicates(subset='stationCode', keep='last')
         else:
             latest_data = df.drop_duplicates(subset='stationCode', keep='last')
         
+        st.success(f"Successfully processed {len(latest_data)} stations")
         return latest_data
+        
     except FileNotFoundError:
         st.error("Combined_cleaned.csv file not found. Please ensure the file is in the same directory.")
         return pd.DataFrame()
     except Exception as e:
         st.error(f"Error loading Combined_cleaned.csv: {str(e)}")
+        st.write("**Detailed error information:**")
+        st.write(f"Error type: {type(e).__name__}")
+        
+        # Try to read just the first few rows to diagnose
+        try:
+            sample_df = pd.read_csv("Combined_cleaned.csv", nrows=5)
+            # st.write("**Sample of first 5 rows:**")
+            # st.dataframe(sample_df)
+            # st.write("**Column names in sample:**")
+            # st.write(list(sample_df.columns))
+        except Exception as sample_error:
+            st.error(f"Cannot even read sample data: {sample_error}")
+        
         return pd.DataFrame()
 
 def get_status_category(value):
@@ -210,9 +339,21 @@ def main():
     with st.sidebar:
         st.header("📊 Dashboard Controls")
         
-        # Data status indicator
+        # Data status indicator with date debugging
         if not realtime_df.empty:
             st.success(f"✅ Data loaded: {len(realtime_df)} stations")
+            
+            # Add date debugging info
+            if 'Date_Time' in realtime_df.columns:
+                date_info = realtime_df['Date_Time'].describe()
+                st.write("**Date_Time Column Info:**")
+                # st.write(f"- Valid dates: {realtime_df['Date_Time'].notna().sum()}")
+                st.write(f"- Date range: {realtime_df['Date_Time'].min()} to {realtime_df['Date_Time'].max()}")
+                
+                # Show sample of actual dates
+                #sample_dates = realtime_df[['stationCode', 'Date_Time']].head(3)
+                #st.write("**Sample dates:**")
+                # st.dataframe(sample_dates)
         else:
             st.error("❌ No real-time data loaded")
         
@@ -375,19 +516,31 @@ def main():
                     if 'Value' in station and pd.notna(station['Value']):
                         status, color = get_status_category(station['Value'])
                         
-                        # Handle date formatting safely
-                        last_updated = station.get('Date_Time', 'N/A')
+                        # Handle date formatting with better logic
+                        last_updated = station.get('Date_Time')
+                        last_updated_str = "No Data"
+                        
                         if pd.notna(last_updated):
-                            if isinstance(last_updated, str):
-                                try:
-                                    parsed_date = pd.to_datetime(last_updated)
+                            try:
+                                # Convert to datetime if it's a string
+                                if isinstance(last_updated, str):
+                                    # Try to parse the string
+                                    if last_updated.strip() != '' and last_updated.lower() != 'nan':
+                                        parsed_date = pd.to_datetime(last_updated)
+                                        last_updated_str = parsed_date.strftime("%Y-%m-%d %H:%M")
+                                    else:
+                                        last_updated_str = "Invalid Date"
+                                elif hasattr(last_updated, 'strftime'):
+                                    # It's already a datetime object
+                                    last_updated_str = last_updated.strftime("%Y-%m-%d %H:%M")
+                                else:
+                                    # Try to convert whatever it is
+                                    parsed_date = pd.to_datetime(str(last_updated))
                                     last_updated_str = parsed_date.strftime("%Y-%m-%d %H:%M")
-                                except:
-                                    last_updated_str = str(last_updated)
-                            else:
-                                last_updated_str = last_updated.strftime("%Y-%m-%d %H:%M")
-                        else:
-                            last_updated_str = "No Data"
+                            except (ValueError, TypeError, AttributeError) as e:
+                                # If all else fails, show the raw value
+                                last_updated_str = f"Parse Error: {str(last_updated)}"
+                                st.warning(f"Date parsing error for station {station['stationCode']}: {e}")
                         
                         st.markdown(f"""
                         **💧 Water Data**
@@ -396,6 +549,7 @@ def main():
                         - **Status:** <span style="color:{color}">**{status}**</span>
                         - **Aquifer Type:** {station.get('well_aquifer_type', 'N/A')}
                         - **Last Updated:** {last_updated_str}
+                        - **Debug - Raw Date:** {station.get('Date_Time')}
                         """, unsafe_allow_html=True)
                     else:
                         st.warning("No real-time data available for this station")
@@ -489,7 +643,7 @@ def main():
             """
         
         # Compact tooltip
-        tooltip = f"<b>{row['stationName']}</b><br>{status}: {water_level:.2f}m" if pd.notna(water_level) else f"<b>{row['stationName']}</b><br>No data"
+        tooltip = f"<b>{row['stationName']}</b><br>{status}: {water_level:.2f}m <br>Click here" if pd.notna(water_level) else f"<b>{row['stationName']}</b><br>No data"
         
         folium.Marker(
             location=[row["latitude"], row["longitude"]],
@@ -501,7 +655,7 @@ def main():
     # Compact legend
     legend_html = '''
     <div style="position: fixed; top: 10px; right: 10px; width: 150px; 
-                background-color: grey; border:2px solid grey; z-index:9999; 
+                background-color: grey ; border:2px solid grey; z-index:9999; 
                 font-size:11px; padding: 8px; border-radius: 5px;">
     <h5 style="margin: 0 0 5px 0;">Water Levels</h5>
     <i class="fa fa-circle" style="color:green"></i> Good (> -10m)<br>
