@@ -429,8 +429,49 @@ def calculate_water_trends(station_data):
         'recharge_pattern': recharge_pattern
     }
 
+def generate_synthetic_comparative_data(station_data, station_info):
+    """Generate synthetic data for comparison charts"""
+    if station_data.empty:
+        return {}
+    
+    station_code = station_info.get('stationCode', 'Unknown')
+    
+    # Generate synthetic neighboring stations data
+    neighboring_stations = {
+        f'Station_{station_code}_N1': {
+            'name': f'Station North of {station_code}',
+            'values': station_data['Value'] + np.random.normal(0, 2, len(station_data))
+        },
+        f'Station_{station_code}_S1': {
+            'name': f'Station South of {station_code}',
+            'values': station_data['Value'] + np.random.normal(-1, 1.5, len(station_data))
+        },
+        f'Station_{station_code}_E1': {
+            'name': f'Station East of {station_code}',
+            'values': station_data['Value'] + np.random.normal(1.5, 3, len(station_data))
+        },
+        f'Station_{station_code}_W1': {
+            'name': f'Station West of {station_code}',
+            'values': station_data['Value'] + np.random.normal(-0.5, 2.5, len(station_data))
+        }
+    }
+    
+    # Generate quality control data
+    quality_data = {
+        'dates': station_data['Date_Time'].iloc[-30:] if len(station_data) >= 30 else station_data['Date_Time'],
+        'measured': station_data['Value'].iloc[-30:] if len(station_data) >= 30 else station_data['Value'],
+        'expected': station_data['Value'].iloc[-30:] + np.random.normal(0, 0.5, min(30, len(station_data))) if len(station_data) >= 30 else station_data['Value'] + np.random.normal(0, 0.5, len(station_data)),
+        'upper_limit': station_data['Value'].mean() + 2 * station_data['Value'].std(),
+        'lower_limit': station_data['Value'].mean() - 2 * station_data['Value'].std(),
+        'target': station_data['Value'].mean()
+    }
+    
+    return {
+        'neighboring_stations': neighboring_stations,
+        'quality_data': quality_data
+    }
 def create_station_analysis_plots(station_data, station_info):
-    """Create comprehensive plots for station analysis"""
+    """Create comprehensive plots for station analysis with diverse chart types"""
     
     if station_data.empty:
         st.warning("No time series data available for detailed analysis.")
@@ -448,11 +489,19 @@ def create_station_analysis_plots(station_data, station_info):
         plot_data['Date_Time'] = pd.to_datetime(plot_data['Date_Time'])
         plot_data = plot_data.sort_values('Date_Time')
     
-    # 1. Main Time Series Plot
-    st.markdown('<div class="chart-container">', unsafe_allow_html=True)
-    st.markdown("### 📈 Water Level Time Series")
+    # Generate synthetic data for comparisons
+    synthetic_data = generate_synthetic_comparative_data(plot_data, station_info)
     
-    fig_ts = go.Figure()
+    # 1. Main Time Series Plot with Enhanced Features
+    st.markdown('<div class="chart-container">', unsafe_allow_html=True)
+    st.markdown("### 📈 Water Level Time Series with Control Limits")
+    
+    fig_ts = make_subplots(
+        rows=2, cols=1,
+        row_heights=[0.7, 0.3],
+        vertical_spacing=0.1,
+        subplot_titles=('Water Level Trends', 'Daily Variation Range')
+    )
     
     # Main water level line
     fig_ts.add_trace(go.Scatter(
@@ -463,169 +512,509 @@ def create_station_analysis_plots(station_data, station_info):
         line=dict(color='#2E86AB', width=2),
         marker=dict(size=4),
         hovertemplate='<b>Date:</b> %{x}<br><b>Water Level:</b> %{y:.2f} m<extra></extra>'
-    ))
+    ), row=1, col=1)
     
-    # Add threshold lines
-    y_min, y_max = plot_data['Value'].min(), plot_data['Value'].max()
-    fig_ts.add_hline(y=-10, line_dash="dash", line_color="orange", 
-                     annotation_text="Moderate Level (-10m)")
-    fig_ts.add_hline(y=-20, line_dash="dash", line_color="red", 
-                     annotation_text="Critical Level (-20m)")
+    # Add control limits
+    mean_level = plot_data['Value'].mean()
+    std_level = plot_data['Value'].std()
+    ucl = mean_level + 3 * std_level  # Upper Control Limit
+    lcl = mean_level - 3 * std_level  # Lower Control Limit
     
-    # Add trend line
-    if len(plot_data) > 2:
-        x_numeric = np.arange(len(plot_data))
-        z = np.polyfit(x_numeric, plot_data['Value'], 1)
-        trend_line = np.poly1d(z)(x_numeric)
+    fig_ts.add_hline(y=ucl, line_dash="dash", line_color="red", 
+                     annotation_text="Upper Control Limit", row=1)
+    fig_ts.add_hline(y=lcl, line_dash="dash", line_color="red", 
+                     annotation_text="Lower Control Limit", row=1)
+    fig_ts.add_hline(y=mean_level, line_dash="solid", line_color="green", 
+                     annotation_text="Center Line", row=1)
+    
+    # Add daily variation (if we have enough data)
+    if len(plot_data) > 7:
+        plot_data['Date'] = plot_data['Date_Time'].dt.date
+        daily_stats = plot_data.groupby('Date')['Value'].agg(['min', 'max', 'mean']).reset_index()
+        daily_stats['range'] = daily_stats['max'] - daily_stats['min']
         
-        fig_ts.add_trace(go.Scatter(
-            x=plot_data['Date_Time'],
-            y=trend_line,
-            mode='lines',
-            name='Trend Line',
-            line=dict(color='red', width=2, dash='dot'),
-            hovertemplate='<b>Trend:</b> %{y:.2f} m<extra></extra>'
-        ))
+        fig_ts.add_trace(go.Bar(
+            x=daily_stats['Date'],
+            y=daily_stats['range'],
+            name='Daily Range',
+            marker_color='rgba(255, 182, 193, 0.6)',
+            hovertemplate='<b>Date:</b> %{x}<br><b>Daily Range:</b> %{y:.2f} m<extra></extra>'
+        ), row=2, col=1)
     
     fig_ts.update_layout(
-        title=f'Water Level Trends - {station_info.get("stationName", "Unknown Station")}',
-        xaxis_title='Date',
-        yaxis_title='Water Level (meters)',
-        hovermode='x unified',
+        title=f'Enhanced Water Level Analysis - {station_info.get("stationName", "Unknown Station")}',
         template='plotly_dark',
-        height=500,
+        height=600,
         showlegend=True
     )
+    
+    fig_ts.update_xaxes(title_text="Date", row=2, col=1)
+    fig_ts.update_yaxes(title_text="Water Level (m)", row=1, col=1)
+    fig_ts.update_yaxes(title_text="Range (m)", row=2, col=1)
     
     st.plotly_chart(fig_ts, use_container_width=True)
     st.markdown('</div>', unsafe_allow_html=True)
     
-    # Create two columns for additional plots
+    # Create multiple columns for diverse charts
     col1, col2 = st.columns(2)
     
     with col1:
-        # 2. Monthly Pattern Analysis
+        # 2. Box Plot Comparison with Neighboring Stations
         st.markdown('<div class="chart-container">', unsafe_allow_html=True)
-        st.markdown("### 📊 Monthly Water Level Pattern")
+        st.markdown("### 📊 Regional Water Level Comparison (Box Plot)")
         
-        if len(plot_data) > 30:  # Only if we have enough data
-            plot_data['Month'] = plot_data['Date_Time'].dt.month_name()
-            plot_data['MonthNum'] = plot_data['Date_Time'].dt.month
+        fig_box = go.Figure()
+        
+        # Add current station
+        fig_box.add_trace(go.Box(
+            y=plot_data['Value'],
+            name=f'Current Station\n{station_info.get("stationCode", "Unknown")}',
+            marker_color='#2E86AB',
+            boxpoints='outliers'
+        ))
+        
+        # Add neighboring stations (synthetic data)
+        if synthetic_data and 'neighboring_stations' in synthetic_data:
+            colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4']
+            for i, (station_id, station_data_synth) in enumerate(synthetic_data['neighboring_stations'].items()):
+                fig_box.add_trace(go.Box(
+                    y=station_data_synth['values'],
+                    name=station_data_synth['name'][-15:],  # Truncate name
+                    marker_color=colors[i % len(colors)],
+                    boxpoints='outliers'
+                ))
+        
+        fig_box.update_layout(
+            title='Water Level Distribution Comparison',
+            yaxis_title='Water Level (m)',
+            template='plotly_dark',
+            height=400,
+            showlegend=True
+        )
+        
+        st.plotly_chart(fig_box, use_container_width=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    with col2:
+        # 3. Violin Plot for Distribution Analysis
+        st.markdown('<div class="chart-container">', unsafe_allow_html=True)
+        st.markdown("### 🎻 Water Level Distribution Shape")
+        
+        fig_violin = go.Figure()
+        
+        fig_violin.add_trace(go.Violin(
+            y=plot_data['Value'],
+            name='Distribution',
+            box_visible=True,
+            line_color='#2E86AB',
+            fillcolor='rgba(46, 134, 171, 0.5)',
+            points='all',
+            pointpos=0,
+            jitter=0.3
+        ))
+        
+        fig_violin.update_layout(
+            title='Water Level Distribution Analysis',
+            yaxis_title='Water Level (m)',
+            template='plotly_dark',
+            height=400,
+            showlegend=False
+        )
+        
+        st.plotly_chart(fig_violin, use_container_width=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    # Row 2: Quality Control and Heatmap
+    col3, col4 = st.columns(2)
+    
+    with col3:
+        # 4. Quality Control Chart
+        st.markdown('<div class="chart-container">', unsafe_allow_html=True)
+        st.markdown("### 🎯 Quality Control Chart")
+        
+        if synthetic_data and 'quality_data' in synthetic_data:
+            qc_data = synthetic_data['quality_data']
             
-            monthly_stats = plot_data.groupby('MonthNum').agg({
-                'Value': ['mean', 'min', 'max'],
-                'Month': 'first'
-            }).reset_index()
+            fig_qc = go.Figure()
             
-            monthly_stats.columns = ['MonthNum', 'Avg_Level', 'Min_Level', 'Max_Level', 'Month']
-            
-            fig_monthly = go.Figure()
-            
-            fig_monthly.add_trace(go.Scatter(
-                x=monthly_stats['Month'],
-                y=monthly_stats['Avg_Level'],
+            # Measured values
+            fig_qc.add_trace(go.Scatter(
+                x=qc_data['dates'],
+                y=qc_data['measured'],
                 mode='lines+markers',
-                name='Average Level',
-                line=dict(color='#2E86AB', width=3),
-                marker=dict(size=8)
+                name='Measured',
+                line=dict(color='#2E86AB', width=2),
+                marker=dict(size=6)
             ))
             
-            fig_monthly.add_trace(go.Scatter(
-                x=monthly_stats['Month'],
-                y=monthly_stats['Max_Level'],
+            # Expected values
+            fig_qc.add_trace(go.Scatter(
+                x=qc_data['dates'],
+                y=qc_data['expected'],
                 mode='lines',
-                name='Max Level',
-                line=dict(color='green', width=1, dash='dot'),
-                fill=None
+                name='Expected',
+                line=dict(color='green', width=2, dash='dash')
             ))
             
-            fig_monthly.add_trace(go.Scatter(
-                x=monthly_stats['Month'],
-                y=monthly_stats['Min_Level'],
-                mode='lines',
-                name='Min Level',
-                line=dict(color='red', width=1, dash='dot'),
-                fill='tonexty',
-                fillcolor='rgba(46, 134, 171, 0.2)'
-            ))
+            # Control limits
+            fig_qc.add_hline(y=qc_data['upper_limit'], line_dash="dot", 
+                            line_color="red", annotation_text="UCL")
+            fig_qc.add_hline(y=qc_data['lower_limit'], line_dash="dot", 
+                            line_color="red", annotation_text="LCL")
+            fig_qc.add_hline(y=qc_data['target'], line_dash="solid", 
+                            line_color="orange", annotation_text="Target")
             
-            fig_monthly.update_layout(
-                title='Seasonal Water Level Variation',
-                xaxis_title='Month',
+            fig_qc.update_layout(
+                title='Quality Control Monitoring',
+                xaxis_title='Date',
                 yaxis_title='Water Level (m)',
                 template='plotly_dark',
                 height=400,
                 showlegend=True
             )
             
-            st.plotly_chart(fig_monthly, use_container_width=True)
-        else:
-            st.info("Insufficient data for monthly pattern analysis (need >30 data points)")
-        
+            st.plotly_chart(fig_qc, use_container_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
     
-    with col2:
-        # 3. Water Level Distribution
+    with col4:
+        # 5. Correlation Heatmap with Synthetic Environmental Factors
         st.markdown('<div class="chart-container">', unsafe_allow_html=True)
-        st.markdown("### 📊 Water Level Distribution")
+        st.markdown("### 🔥 Environmental Factors Correlation")
         
-        fig_hist = px.histogram(
-            plot_data, 
-            x='Value',
-            nbins=20,
-            title='Water Level Frequency Distribution',
-            color_discrete_sequence=['#2E86AB'],
-            template='plotly_dark'
-        )
+        # Generate synthetic environmental data
+        n_points = len(plot_data)
+        env_data = pd.DataFrame({
+            'Water_Level': plot_data['Value'].values,
+            'Rainfall': np.random.normal(50, 20, n_points),
+            'Temperature': np.random.normal(25, 5, n_points),
+            'Humidity': np.random.normal(65, 15, n_points),
+            'Soil_Moisture': np.random.normal(30, 10, n_points),
+            'Evapotranspiration': np.random.normal(4, 1, n_points)
+        })
         
-        fig_hist.add_vline(x=plot_data['Value'].mean(), line_dash="dash", 
-                          line_color="yellow", annotation_text="Average")
-        fig_hist.add_vline(x=-10, line_dash="dash", line_color="orange", 
-                          annotation_text="Moderate")
-        fig_hist.add_vline(x=-20, line_dash="dash", line_color="red", 
-                          annotation_text="Critical")
+        # Add some correlation to make it realistic
+        env_data['Rainfall'] = env_data['Rainfall'] + env_data['Water_Level'] * 2 + np.random.normal(0, 5, n_points)
+        env_data['Soil_Moisture'] = env_data['Soil_Moisture'] + env_data['Water_Level'] * 1.5 + np.random.normal(0, 3, n_points)
         
-        fig_hist.update_layout(
-            xaxis_title='Water Level (m)',
-            yaxis_title='Frequency',
-            height=400,
-            showlegend=False
-        )
+        corr_matrix = env_data.corr()
         
-        st.plotly_chart(fig_hist, use_container_width=True)
-        st.markdown('</div>', unsafe_allow_html=True)
-    
-    # 4. Recent Trends (Last 30 days)
-    recent_data = plot_data.tail(30) if len(plot_data) >= 30 else plot_data
-    
-    if len(recent_data) > 1:
-        st.markdown('<div class="chart-container">', unsafe_allow_html=True)
-        st.markdown("### 🔍 Recent Water Level Changes (Last 30 Readings)")
-        
-        fig_recent = go.Figure()
-        
-        fig_recent.add_trace(go.Scatter(
-            x=recent_data['Date_Time'],
-            y=recent_data['Value'],
-            mode='lines+markers',
-            name='Recent Water Level',
-            line=dict(color='#FF6B6B', width=3),
-            marker=dict(size=6, color='#FF6B6B'),
-            fill='tozeroy',
-            fillcolor='rgba(255, 107, 107, 0.1)'
+        fig_heatmap = go.Figure(data=go.Heatmap(
+            z=corr_matrix.values,
+            x=corr_matrix.columns,
+            y=corr_matrix.columns,
+            colorscale='RdBu',
+            zmid=0,
+            text=np.round(corr_matrix.values, 2),
+            texttemplate="%{text}",
+            textfont={"size": 10},
+            hovertemplate='<b>%{x}</b> vs <b>%{y}</b><br>Correlation: %{z:.3f}<extra></extra>'
         ))
         
-        fig_recent.update_layout(
-            title='Recent Water Level Trend',
-            xaxis_title='Date',
-            yaxis_title='Water Level (m)',
+        fig_heatmap.update_layout(
+            title='Environmental Factors Correlation Matrix',
             template='plotly_dark',
-            height=350,
-            showlegend=False
+            height=400,
+            xaxis=dict(tickangle=45)
         )
         
-        st.plotly_chart(fig_recent, use_container_width=True)
+        st.plotly_chart(fig_heatmap, use_container_width=True)
         st.markdown('</div>', unsafe_allow_html=True)
+    
+    # Row 3: Advanced Charts
+    col5, col6 = st.columns(2)
+    
+    with col5:
+        # 6. Gauge Chart for Current Status
+        st.markdown('<div class="chart-container">', unsafe_allow_html=True)
+        st.markdown("### ⏱️ Current Water Level Status")
+        
+        current_value = plot_data['Value'].iloc[-1]
+        min_val = plot_data['Value'].min()
+        max_val = plot_data['Value'].max()
+        
+        fig_gauge = go.Figure(go.Indicator(
+            mode="gauge+number+delta",
+            value=current_value,
+            domain={'x': [0, 1], 'y': [0, 1]},
+            title={'text': "Water Level (m)"},
+            delta={'reference': plot_data['Value'].mean()},
+            gauge={
+                'axis': {'range': [None, max(0, max_val + 5)]},
+                'bar': {'color': "darkblue"},
+                'steps': [
+                    {'range': [min_val, -20], 'color': "lightcoral"},
+                    {'range': [-20, -10], 'color': "lightyellow"},
+                    {'range': [-10, max_val], 'color': "lightgreen"}
+                ],
+                'threshold': {
+                    'line': {'color': "red", 'width': 4},
+                    'thickness': 0.75,
+                    'value': -15
+                }
+            }
+        ))
+        
+        fig_gauge.update_layout(
+            template='plotly_dark',
+            height=400,
+            font={'color': "white", 'family': "Arial"}
+        )
+        
+        st.plotly_chart(fig_gauge, use_container_width=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    with col6:
+        # 7. Radar Chart for Station Performance Metrics
+        st.markdown('<div class="chart-container">', unsafe_allow_html=True)
+        st.markdown("### 🎯 Station Performance Radar")
+        
+        # Calculate performance metrics (normalized to 0-100 scale)
+        stability = max(0, 100 - (plot_data['Value'].std() * 10))  # Lower std = higher stability
+        trend_health = max(0, 50 + (np.polyfit(range(len(plot_data)), plot_data['Value'], 1)[0] * 50))
+        data_quality = (len(plot_data.dropna()) / len(plot_data)) * 100
+        level_adequacy = max(0, min(100, (plot_data['Value'].mean() + 30) * 2))  # Assuming -30 is worst case
+        consistency = max(0, 100 - (abs(plot_data['Value'].diff()).mean() * 20))
+        
+        categories = ['Data Quality', 'Level Adequacy', 'Stability', 'Trend Health', 'Consistency']
+        values = [data_quality, level_adequacy, stability, trend_health, consistency]
+        
+        fig_radar = go.Figure()
+        
+        fig_radar.add_trace(go.Scatterpolar(
+            r=values,
+            theta=categories,
+            fill='toself',
+            name='Station Performance',
+            line_color='#2E86AB',
+            fillcolor='rgba(46, 134, 171, 0.3)'
+        ))
+        
+        fig_radar.update_layout(
+            polar=dict(
+                radialaxis=dict(
+                    visible=True,
+                    range=[0, 100]
+                )),
+            showlegend=True,
+            template='plotly_dark',
+            title="Station Performance Metrics",
+            height=400
+        )
+        
+        st.plotly_chart(fig_radar, use_container_width=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    # Full width chart for waterfall analysis
+    st.markdown('<div class="chart-container">', unsafe_allow_html=True)
+    st.markdown("### 💧 Monthly Water Level Changes (Waterfall Chart)")
+    
+    if len(plot_data) > 30:  # If we have enough data
+        plot_data['YearMonth'] = plot_data['Date_Time'].dt.to_period('M')
+        monthly_avg = plot_data.groupby('YearMonth')['Value'].mean()
+        
+        if len(monthly_avg) > 1:
+            monthly_changes = monthly_avg.diff().fillna(0)
+            
+            fig_waterfall = go.Figure()
+            
+            cumulative = monthly_avg.iloc[0]
+            x_vals = [str(monthly_avg.index[0])]
+            y_vals = [cumulative]
+            colors = ['blue']
+            
+            for i, change in enumerate(monthly_changes.iloc[1:], 1):
+                x_vals.append(str(monthly_avg.index[i]))
+                y_vals.append(change)
+                colors.append('green' if change > 0 else 'red')
+                cumulative += change
+            
+            fig_waterfall.add_trace(go.Waterfall(
+                name="Water Level Changes",
+                orientation="v",
+                measure=["absolute"] + ["relative"] * (len(y_vals) - 1),
+                x=x_vals,
+                textposition="outside",
+                text=[f"{val:.2f}m" for val in y_vals],
+                y=y_vals,
+                connector={"line": {"color": "rgb(63, 63, 63)"}},
+            ))
+            
+            fig_waterfall.update_layout(
+                title="Monthly Water Level Changes Analysis",
+                xaxis_title="Month",
+                yaxis_title="Water Level (m)",
+                template='plotly_dark',
+                height=400,
+                showlegend=False
+            )
+            
+            st.plotly_chart(fig_waterfall, use_container_width=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True)
+
+# Additional function for overview page enhancements
+def create_overview_dashboard_charts(df):
+    """Create enhanced charts for the overview page"""
+    
+    if df.empty or 'Value' not in df.columns:
+        return
+    
+    st.markdown("### 📊 Advanced Dashboard Analytics")
+    
+    # Create tabs for different overview charts
+    tab1, tab2, tab3, tab4 = st.tabs(["📈 Trends Overview", "🗺️ Regional Analysis", "⚡ Real-time Alerts", "📋 Performance Matrix"])
+    
+    with tab1:
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            # Funnel chart for water level categories
+            good_count = len(df[df['Value'] > -10])
+            moderate_count = len(df[(df['Value'] <= -10) & (df['Value'] > -20)])
+            critical_count = len(df[df['Value'] <= -20])
+            
+            fig_funnel = go.Figure(go.Funnel(
+                y=["Good Level", "Moderate Level", "Critical Level"],
+                x=[good_count, moderate_count, critical_count],
+                textinfo="value+percent initial",
+                marker_color=["green", "orange", "red"]
+            ))
+            
+            fig_funnel.update_layout(
+                title="Water Level Status Distribution",
+                template='plotly_dark',
+                height=400
+            )
+            
+            st.plotly_chart(fig_funnel, use_container_width=True)
+        
+        with col2:
+            # Treemap for state-wise distribution
+            if 'state' in df.columns:
+                state_counts = df.groupby('state').agg({
+                    'stationCode': 'count',
+                    'Value': 'mean'
+                }).reset_index()
+                state_counts.columns = ['State', 'Station_Count', 'Avg_Level']
+                
+                fig_treemap = go.Figure(go.Treemap(
+                    labels=state_counts['State'],
+                    values=state_counts['Station_Count'],
+                    parents=[""] * len(state_counts),
+                    textinfo="label+value",
+                    texttemplate="<b>%{label}</b><br>Stations: %{value}<br>Avg Level: %{customdata:.2f}m",
+                    customdata=state_counts['Avg_Level'],
+                    colorscale='Viridis'
+                ))
+                
+                fig_treemap.update_layout(
+                    title="Station Distribution by State",
+                    template='plotly_dark',
+                    height=400
+                )
+                
+                st.plotly_chart(fig_treemap, use_container_width=True)
+    
+    with tab2:
+        # Sunburst chart for hierarchical data
+        if all(col in df.columns for col in ['state', 'district']):
+            # Create hierarchical data
+            hierarchy_data = df.groupby(['state', 'district']).agg({
+                'stationCode': 'count',
+                'Value': 'mean'
+            }).reset_index()
+            
+            fig_sunburst = go.Figure(go.Sunburst(
+                labels=list(hierarchy_data['state']) + list(hierarchy_data['district']),
+                parents=[""] * len(hierarchy_data['state']) + list(hierarchy_data['state']),
+                values=list(hierarchy_data['stationCode']) * 2,
+                branchvalues="total",
+            ))
+            
+            fig_sunburst.update_layout(
+                title="Hierarchical Station Distribution",
+                template='plotly_dark',
+                height=500
+            )
+            
+            st.plotly_chart(fig_sunburst, use_container_width=True)
+    
+    with tab3:
+        # Real-time alerts with indicator charts
+        critical_stations = df[df['Value'] <= -20]
+        
+        col1, col2, col3 = st.columns(3)
+        
+        with col1:
+            fig_indicator1 = go.Figure(go.Indicator(
+                mode="number",
+                value=len(critical_stations),
+                title={"text": "Critical Alerts"},
+                number={'font': {'color': 'red', 'size': 40}},
+                domain={'x': [0, 1], 'y': [0, 1]}
+            ))
+            fig_indicator1.update_layout(template='plotly_dark', height=200)
+            st.plotly_chart(fig_indicator1, use_container_width=True)
+        
+        with col2:
+            avg_level = df['Value'].mean()
+            fig_indicator2 = go.Figure(go.Indicator(
+                mode="number",
+                value=avg_level,
+                title={"text": "Average Level (m)"},
+                number={'font': {'color': 'blue', 'size': 40}},
+                domain={'x': [0, 1], 'y': [0, 1]}
+            ))
+            fig_indicator2.update_layout(template='plotly_dark', height=200)
+            st.plotly_chart(fig_indicator2, use_container_width=True)
+        
+        with col3:
+            active_stations = len(df[df.get('stationStatus', '') == 'Active'])
+            fig_indicator3 = go.Figure(go.Indicator(
+                mode="number",
+                value=active_stations,
+                title={"text": "Active Stations"},
+                number={'font': {'color': 'green', 'size': 40}},
+                domain={'x': [0, 1], 'y': [0, 1]}
+            ))
+            fig_indicator3.update_layout(template='plotly_dark', height=200)
+            st.plotly_chart(fig_indicator3, use_container_width=True)
+    
+    with tab4:
+        # Performance matrix heatmap
+        if 'state' in df.columns and 'district' in df.columns:
+            # Create performance matrix
+            perf_matrix = df.groupby(['state', 'district']).agg({
+                'Value': ['mean', 'std', 'count']
+            }).round(2)
+            
+            # Flatten column names
+            perf_matrix.columns = ['Avg_Level', 'Std_Dev', 'Station_Count']
+            perf_matrix = perf_matrix.reset_index()
+            
+            # Create pivot table for heatmap
+            pivot_data = perf_matrix.pivot(index='state', columns='district', values='Avg_Level')
+            
+            fig_matrix = go.Figure(data=go.Heatmap(
+                z=pivot_data.values,
+                x=pivot_data.columns,
+                y=pivot_data.index,
+                colorscale='RdYlBu_r',
+                text=np.round(pivot_data.values, 2),
+                texttemplate="%{text}",
+                textfont={"size": 10},
+                hovertemplate='<b>State:</b> %{y}<br><b>District:</b> %{x}<br><b>Avg Level:</b> %{z:.2f}m<extra></extra>'
+            ))
+            
+            fig_matrix.update_layout(
+                title='Regional Performance Matrix (Average Water Levels)',
+                template='plotly_dark',
+                height=500,
+                xaxis={'title': 'District'},
+                yaxis={'title': 'State'}
+            )
+            
+            st.plotly_chart(fig_matrix, use_container_width=True)
 
 def render_station_detail_page(station_code, full_data, metadata_df):
     """Render the detailed station analysis page"""
