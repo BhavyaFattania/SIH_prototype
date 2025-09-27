@@ -17,3 +17,20 @@ A simple Streamlit app template for you to modify!
    ```
    $ streamlit run streamlit_app.py
    ```
+
+# Firebase Database Info
+## Gujarat only stations data is collected
+## currently it contains the data from 1-6-2025 to 30-6-2025 of the states  
+"Ahmedabad", "Amreli", "Anand", "Aravalli", "Banaskantha", "Bharuch", "Bhavnagar", "Botad", "Chhota Udaipur", "Dahod", "Dang", "Devbhumi Dwarka","Gandhinagar", "Gir Somnath", "Jamnagar", "Junagadh", "Kutch", "Kheda","Mahisagar", "Mehsana", "Morbi", "Narmada", "Navsari", "Panchmahal",
+
+## remanining 
+"Patan", "Porbandar", "Rajkot", "Sabarkantha", "Surat", "Surendranagar","Tapi", "Vadodara", "Valsad"
+
+## Variables chosen
+page = 0 to 5
+data from 2025-06-01
+date to 2025-06-30
+firebase database limit reached of 20k writes operations for 27-09-2025 
+
+
+
